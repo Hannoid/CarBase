@@ -57,9 +57,12 @@ public class Menu {
                                         default: {
                                             System.out.println("Машина с номером " + findMenuNumberCar + " в базу занесена");
                                             break ;
+
+
                                         }
                                     }
                                     break;
+                                    //fghfghfgh
                                 }
                                 case "3": {
                                     System.out.println("3 - Поиск по марки и модели");
