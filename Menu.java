@@ -1,4 +1,4 @@
-package ProjectCar;
+
 
 import java.util.Scanner;
 
@@ -62,7 +62,7 @@ public class Menu {
                                         }
                                     }
                                     break;
-                                    //fghfghfgh
+
                                 }
                                 case "3": {
                                     System.out.println("3 - Поиск по марки и модели");
