@@ -6,7 +6,7 @@ public class Print {
         System.out.println(obj);
     }
 
-    public static void print (S){
+    public static void print ( ){
         System.out.println();
     }
 
