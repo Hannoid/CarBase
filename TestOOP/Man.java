@@ -18,6 +18,6 @@ public class Man extends Human {
 
     @Override
     void voisE() {
-        System.out.println("ve");;
+        System.out.println("man  voise");;
     }
 }

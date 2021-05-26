@@ -22,7 +22,7 @@ public class Time {
             if((secondspassed%60)==0)
                 displayMinutes++;
 
-            System.out.println(displayMinutes+"::"+secondspassed);
+            System.out.println(displayMinutes+":"+secondspassed);
         }
 
     }
