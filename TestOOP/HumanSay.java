@@ -12,6 +12,7 @@ public class HumanSay {
 
         Female Jaid  = new Female();
     Jaid.voisE();
+    females.voisE();
     }
 
 }
