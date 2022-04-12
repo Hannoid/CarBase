@@ -27,31 +27,45 @@ public class StudentResource {
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna");
         Student studentOlga1 = Student.CREATE_STUDENT("Olgas", "Olgas", "Olegovnas");
 
-
         studentCollector.addNewStudent(studentRoma);
         studentCollector.addNewStudent(studentVova);
         studentCollector.addNewStudent(studentKate);
         studentCollector.addNewStudent(studentOlga);
-
         studentCollector.addNewStudent(studentOlga1);
 
+        StudentResource studentResource = new StudentResource();
+        studentResource.printAllStudents(studentCollector.getAllStudents());
+        System.out.println("asdasdasd");
 
-       /* studentCollector.removeStudent(2);
+studentCollector.removeSearch("Kate");
+
+        System.out.println("remove ");
+        studentResource.printAllStudents(studentCollector.getAllStudents());
+
+        //studentCollector.searchStudent("studentKate");
+
+
+
+
+        /*System.out.println("clear 1");
         studentCollector.removeStudent(0);
-        studentCollector.removeStudent(1);
-        studentCollector.removeStudent(3);
-        */
 
+         */
 
-        //studentCollector.removeStudent(studentKate);
+        //studentCollector.removeStudentName(Kate);
         //studentCollector.remove("studentKate");
 
 
 
-        StudentResource studentResource = new StudentResource();
 
+
+        /*studentResource.printAllStudents(studentCollector.getAllStudents());
+        studentCollector.removeAll();
+        System.out.println("Clear all");
         studentResource.printAllStudents(studentCollector.getAllStudents());
+        System.out.println("end Clear");
 
+         */
 
 
 

@@ -10,7 +10,6 @@ public class StudentCollector {
     private int currentPosition = 0;
 
 
-
     public void addNewStudent(final Student student) {
         if (Objects.isNull(student)) return;
         if (studentArrays.length < currentPosition + 1) {
@@ -23,28 +22,50 @@ public class StudentCollector {
     }
 
     public void removeStudent(int index) {
-        studentArrays[index] = null;
-
-
+                studentArrays[index] = null;
     }
 
-
-
-    /*public void removeStudent(Student student) {
-        studentArrays(student) = null;
-
-
+    public void removeAll() {
+        for (int i = 0; i < studentArrays.length; i++) {
+            studentArrays[i] = null;
+        }
     }
 
+    public void removeSearch(String name) {
+        for (int i = 0; i < studentArrays.length; i++) {
+            if (studentArrays[i].getName().equals(name)){
+                studentArrays[i] =null;
+                break;
+            }
+        }
+        /*for (Student studentSearch : studentArrays)
+             if (studentSearch.getName().equals(name)) {
+
+                 System.out.println("studentSearch");
+
+             break;}
+
+         */
+
+        }
+
+    public void searchStudent() {
+        //System.out.println(studentArrays.co);
+    }
+    /*public void removeStudentName(String firstName) {
+        for (int i = 0; i < studentArrays.length; i++) {
+            if (studentArrays.f== firstName) {
+                return i;
+            }
+        }
+        return -1;
+    }
      */
-
-
 
 
     public Student[] getAllStudents() {
         return studentArrays;
     }
-
 
 
 }
