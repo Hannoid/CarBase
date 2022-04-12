@@ -22,7 +22,7 @@ public class StudentCollector {
     }
 
     public void removeStudent(int index) {
-                studentArrays[index] = null;
+        studentArrays[index] = null;
     }
 
     public void removeAll() {
@@ -31,10 +31,11 @@ public class StudentCollector {
         }
     }
 
-    public void removeSearch(String name) {
+    public void removeSearch(String firstName) {
         for (int i = 0; i < studentArrays.length; i++) {
-            if (studentArrays[i].getName().equals(name)){
-                studentArrays[i] =null;
+            if ( studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
+                studentArrays[i] = null;
+                System.out.println("remove " + firstName);
                 break;
             }
         }
@@ -47,7 +48,7 @@ public class StudentCollector {
 
          */
 
-        }
+    }
 
     public void searchStudent() {
         //System.out.println(studentArrays.co);

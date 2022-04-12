@@ -25,7 +25,7 @@ public class StudentResource {
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna");
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna");
-        Student studentOlga1 = Student.CREATE_STUDENT("Olgas", "Olgas", "Olegovnas");
+        Student studentOlga1 = Student.CREATE_STUDENT("Olga", "Olgas", "Olegovnas");
 
         studentCollector.addNewStudent(studentRoma);
         studentCollector.addNewStudent(studentVova);
@@ -37,9 +37,10 @@ public class StudentResource {
         studentResource.printAllStudents(studentCollector.getAllStudents());
         System.out.println("asdasdasd");
 
-studentCollector.removeSearch("Kate");
-
-        System.out.println("remove ");
+        studentCollector.removeSearch("Kate");
+        studentCollector.removeSearch("Olga");
+        studentCollector.removeSearch("Olga");
+        System.out.println("remove array");
         studentResource.printAllStudents(studentCollector.getAllStudents());
 
         //studentCollector.searchStudent("studentKate");
@@ -66,11 +67,6 @@ studentCollector.removeSearch("Kate");
         System.out.println("end Clear");
 
          */
-
-
-
-
-
 
 
     }
