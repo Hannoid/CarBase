@@ -15,16 +15,22 @@ public class Student {
         return (Objects.isNull(value) || value.trim().length() == 0);
     }
 
+    private boolean isEmptyTicket(final long value) {
+        return (Objects.isNull(value));
+    }
+
     private boolean validateName(final String name) {
         if (isEmpty(name)) return false;
         return name.replaceAll("[^0-9]", "").length() == 0;
     }
+
     private boolean validateTicket(final long ticket) {
-        if (isEmpty(ticket)) return false;
-        return ticket.replaceAll("[^0-9]", "").length() == 0;
+        if (isEmptyTicket(ticket)) return false;
+        String studentTicketString = Long.toString(studentTicket);
+        return studentTicketString.replaceAll("[^A-Z]", "").length() == 0;
+        //Long studentTicketString = Long.valueOf(studentTicketString);
+
     }
-
-
 
     public void setFirstName(String firstName) {
         if (!isEmpty(this.firstName)) return;
@@ -47,14 +53,12 @@ public class Student {
         }
     }
 
-
-    public void setstudentTicket(long studentTicket) {
-        if (!isEmpty(this.studentTicket)) return;
-        if (validateTicket(studentTicket)) {
+    public void setStudentTicket(long studentTicket) {
+        if (!isEmptyTicket(this.studentTicket)) return;
+        /*if (validateTicket(studentTicket)) {
             this.studentTicket = studentTicket;
-        }
+        }         */
     }
-
 
     public Student() {
     }
@@ -63,7 +67,7 @@ public class Student {
         setFirstName(firstName);
         setLastName(last);
         setMiddleName(middle);
-        setstudentTicket(ticket);
+        setStudentTicket(ticket);
     }
 
     public String getName() {
@@ -78,15 +82,20 @@ public class Student {
         return middleName;
     }
 
+    public long getStudentTicket() {
+        return studentTicket;
+    }
+
     public static String getName(Student student) {
         return student.firstName;
     }
 
-    public static Student CREATE_STUDENT(String firstName, String last, String middle) {
-        return new Student(firstName, last, middle);
+    public static Student CREATE_STUDENT(String firstName, String last, String middle, long ticket) {
+        return new Student(firstName, last, middle, ticket);
     }
 
     public String getFIO() {
-        return "full fio student  firstName = " + firstName + " last name = " + lastName + " middle name = " + middleName;
+        //String studentTicketString = Long.toString(studentTicket);
+        return "full fio student  firstName = " + firstName + " last name = " + lastName + " middle name = " + middleName + "   ticket = " + studentTicket;
     }
 }

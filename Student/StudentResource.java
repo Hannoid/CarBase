@@ -17,21 +17,23 @@ public class StudentResource {
 
     public static void main(String[] args) {
         StudentCollector studentCollector = new StudentCollector();
-        Student studentRoma = Student.CREATE_STUDENT("Roma", "Romanov", "Romanovich");
+        Student studentRoma = Student.CREATE_STUDENT("Roma", "Romanov", "Romanovich", 232222);
         Student studentVova = new Student();
         studentVova.setFirstName("Vova");
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
+        studentVova.setStudentTicket(165544);
 
-        Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna");
-        Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna");
-        Student studentOlga1 = Student.CREATE_STUDENT("Olga", "Olgas", "Olegovnas");
+        Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
+        Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
+        Student studentOlga1 = Student.CREATE_STUDENT("Olga", "Olgas", "Olegovnas", 216577);
 
         studentCollector.addNewStudent(studentRoma);
         studentCollector.addNewStudent(studentVova);
         studentCollector.addNewStudent(studentKate);
         studentCollector.addNewStudent(studentOlga);
         studentCollector.addNewStudent(studentOlga1);
+        //System.out.println(studentKate.getStudentTicket());
 
         StudentResource studentResource = new StudentResource();
         studentResource.printAllStudents(studentCollector.getAllStudents());
@@ -42,6 +44,8 @@ public class StudentResource {
         studentCollector.removeSearch("Olga");
         System.out.println("remove array");
         studentResource.printAllStudents(studentCollector.getAllStudents());
+
+
 
         //studentCollector.searchStudent("studentKate");
 
