@@ -24,10 +24,11 @@ public class Student {
         return name.replaceAll("[^0-9]", "").length() == 0;
     }
 
-    private boolean validateTicket(final long ticket) {
-        if (isEmptyTicket(ticket)) return false;
-        String studentTicketString = Long.toString(studentTicket);
-        return studentTicketString.replaceAll("[^A-Z]", "").length() == 0;
+    private boolean validateTicket(final long Ticket) {
+        if (isEmptyTicket(Ticket)) return false;
+        return Ticket==0 ;
+        //String studentTicketString = Long.toString(studentTicket);
+        //return studentTicketString.replaceAll("[^A-Z]", "").length() == 0;
         //Long studentTicketString = Long.valueOf(studentTicketString);
 
     }
@@ -55,9 +56,9 @@ public class Student {
 
     public void setStudentTicket(long studentTicket) {
         if (!isEmptyTicket(this.studentTicket)) return;
-        /*if (validateTicket(studentTicket)) {
+        if (validateTicket(studentTicket)) {
             this.studentTicket = studentTicket;
-        }         */
+        }
     }
 
     public Student() {

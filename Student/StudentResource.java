@@ -1,7 +1,7 @@
 package Student;
 
 import java.util.*;
-import java.util.Iterator;
+
 
 public class StudentResource {
 
@@ -18,11 +18,16 @@ public class StudentResource {
     public static void main(String[] args) {
         StudentCollector studentCollector = new StudentCollector();
         Student studentRoma = Student.CREATE_STUDENT("Roma", "Romanov", "Romanovich", 232222);
+        System.out.println(studentRoma.getStudentTicket());
         Student studentVova = new Student();
         studentVova.setFirstName("Vova");
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
+        System.out.println(studentVova.getStudentTicket());
+
         studentVova.setStudentTicket(165544);
+        System.out.println(studentVova.getName());
+        System.out.println(studentVova.getStudentTicket());
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
@@ -39,11 +44,13 @@ public class StudentResource {
         studentResource.printAllStudents(studentCollector.getAllStudents());
         System.out.println("asdasdasd");
 
-        studentCollector.removeSearch("Kate");
+        /*studentCollector.removeSearch("Kate");
         studentCollector.removeSearch("Olga");
         studentCollector.removeSearch("Olga");
         System.out.println("remove array");
         studentResource.printAllStudents(studentCollector.getAllStudents());
+
+         */
 
 
 
