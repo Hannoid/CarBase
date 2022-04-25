@@ -55,10 +55,13 @@ public class Student {
     }
 
     public void setStudentTicket(long studentTicket) {
-        if (!isEmptyTicket(this.studentTicket)) return;
+        /*if (!isEmptyTicket(this.studentTicket)) return;
         if (validateTicket(studentTicket)) {
             this.studentTicket = studentTicket;
         }
+
+         */
+        this.studentTicket = studentTicket;
     }
 
     public Student() {
