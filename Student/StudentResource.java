@@ -23,6 +23,7 @@ public class StudentResource {
         studentVova.setFirstName("Vova");
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
+        System.out.println(studentVova.getName());
         System.out.println(studentVova.getStudentTicket());
 
         studentVova.setStudentTicket(165544);
