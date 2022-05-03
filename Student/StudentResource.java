@@ -43,7 +43,7 @@ public class StudentResource {
 
         StudentResource studentResource = new StudentResource();
         studentResource.printAllStudents(studentCollector.getAllStudents());
-        System.out.println("asdasdasd");
+        System.out.println("asdasdasd+");
 
         /*studentCollector.removeSearch("Kate");
         studentCollector.removeSearch("Olga");
