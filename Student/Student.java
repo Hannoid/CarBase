@@ -11,13 +11,16 @@ public class Student {
     private String sex;
     private boolean hasMilitaryTicket;
 
+
     private boolean isEmpty(final String value) {
         return (Objects.isNull(value) || value.trim().length() == 0);
     }
 
-    private boolean isEmptyTicket(final long value) {
-        return (Objects.isNull(value));
+    /*private boolean isEmptyTicket(final long value) {
+        return (Objects.isNull(value)|| value.trim().length() == 0);
     }
+
+     */
 
     private boolean validateName(final String name) {
         if (isEmpty(name)) return false;
@@ -25,12 +28,15 @@ public class Student {
     }
 
     private boolean validateTicket(final long Ticket) {
-        if (isEmptyTicket(Ticket)) return false;
-        return Ticket==0 ;
+        //if (isEmptyTicket(Ticket)) return false;
+        if (Math.ceil(Math.log10(Ticket + 0.5)) == 6) {
+            return true;
+        }
         //String studentTicketString = Long.toString(studentTicket);
         //return studentTicketString.replaceAll("[^A-Z]", "").length() == 0;
         //Long studentTicketString = Long.valueOf(studentTicketString);
 
+        return false;
     }
 
     public void setFirstName(String firstName) {
@@ -55,15 +61,19 @@ public class Student {
     }
 
     public void setStudentTicket(long studentTicket) {
-
-
+        //if (!isEmptyTicket(this.studentTicket)) return;
+        if (validateTicket(studentTicket)) {
+          this.studentTicket = studentTicket;
+        }
+        else System.out.println("если 0 значит неправильно введен номер билета");
         /*if (!isEmptyTicket(this.studentTicket)) return;
         if (validateTicket(studentTicket)) {
             this.studentTicket = studentTicket;
         }
 
          */
-        this.studentTicket = studentTicket;
+        //this.studentTicket = studentTicket;
+
     }
 
     public Student() {
@@ -91,6 +101,7 @@ public class Student {
     public long getStudentTicket() {
         return studentTicket;
     }
+
 
     public static String getName(Student student) {
         return student.firstName;

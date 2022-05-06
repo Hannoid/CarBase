@@ -5,6 +5,7 @@ import java.util.*;
 
 public class StudentResource {
 
+
     public void printAllStudents(final Student[] studentArrays) {
         for (Student student : studentArrays) {
             if (Objects.nonNull(student)) {
@@ -16,19 +17,16 @@ public class StudentResource {
 
 
     public static void main(String[] args) {
+
         StudentCollector studentCollector = new StudentCollector();
         Student studentRoma = Student.CREATE_STUDENT("Roma", "Romanov", "Romanovich", 232222);
-        System.out.println(studentRoma.getStudentTicket());
+
         Student studentVova = new Student();
         studentVova.setFirstName("Vova");
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
-        System.out.println(studentVova.getName());
-        System.out.println(studentVova.getStudentTicket());
+        studentVova.setStudentTicket(1654441);
 
-        studentVova.setStudentTicket(165544);
-        System.out.println(studentVova.getName());
-        System.out.println(studentVova.getStudentTicket());
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
@@ -44,6 +42,8 @@ public class StudentResource {
         StudentResource studentResource = new StudentResource();
         studentResource.printAllStudents(studentCollector.getAllStudents());
         System.out.println("asdasdasd+");
+
+        System.out.println();
 
         /*studentCollector.removeSearch("Kate");
         studentCollector.removeSearch("Olga");
