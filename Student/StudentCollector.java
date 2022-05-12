@@ -31,27 +31,59 @@ public class StudentCollector {
         }
     }
 
-    public void removeSearch(String firstName) {
+    public void removeFirsName(String firstName) {
         for (int i = 0; i < studentArrays.length; i++) {
-            if ( studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
+
+            if (studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
                 studentArrays[i] = null;
-                System.out.println("remove " + firstName);
+                System.out.println("remove " + firstName + " index= " + i);
                 break;
             }
+
         }
-        /*for (Student studentSearch : studentArrays)
-             if (studentSearch.getName().equals(name)) {
 
-                 System.out.println("studentSearch");
-
-             break;}
-
-         */
 
     }
 
-    public void searchStudent() {
-        //System.out.println(studentArrays.co);
+    public void removeTicket(long Ticket) {
+        for (int i = 0; i < studentArrays.length; i++) {
+
+            if (studentArrays[i] != null && studentArrays[i].equals(Ticket)) {
+                studentArrays[i] = null;
+                System.out.println("remove " + Ticket + " index= " + i);
+                break;
+            }
+
+        }
+
+
+    }
+
+    public void searchStudent(String firstName) {
+        for (int i = 0; i < studentArrays.length; i++) {
+
+            if (studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
+                System.out.println("Вот ваш стдент с именем " + firstName);
+                System.out.println(studentArrays[i].getFIO());
+                break;
+            }
+
+        }
+    }
+
+
+    public void searchTicket(long Ticket) {
+        for (int i = 0; i < studentArrays.length; i++) {
+
+            if (studentArrays[i] != null && studentArrays[i].getStudentTicket() == Ticket) {
+                System.out.println("Вот ваш студент по номеру " + Ticket);
+                System.out.println(studentArrays[i].getFIO());
+                break;
+            }
+
+        }
+
+
     }
     /*public void removeStudentName(String firstName) {
         for (int i = 0; i < studentArrays.length; i++) {
