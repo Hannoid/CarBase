@@ -27,7 +27,6 @@ public class StudentResource {
         studentVova.setMiddleName("Vova");
         studentVova.setStudentTicket(1654441);
 
-
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
         Student studentOlga1 = Student.CREATE_STUDENT("Olga", "Olgas", "Olegovnas", 216577);
@@ -45,13 +44,16 @@ public class StudentResource {
 
         System.out.println();
 
-        /*studentCollector.removeSearch("Kate");
-        studentCollector.removeSearch("Olga");
-        studentCollector.removeSearch("Olga");
-        System.out.println("remove array");
-        studentResource.printAllStudents(studentCollector.getAllStudents());
+        //studentCollector.removeFirsName("Kate");
+        //studentCollector.removeFirsName("Olga");
+        //studentCollector.removeTicket(216577);
 
-         */
+        studentCollector.searchStudent("Kate");
+        System.out.println("remove array");
+        //studentResource.printAllStudents(studentCollector.getAllStudents());
+        System.out.println("");
+        studentCollector.searchTicket(216577);
+        studentCollector.searchTicket(264888);
 
 
 
