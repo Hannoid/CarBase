@@ -10,6 +10,7 @@ public class Student {
     private int age;
     private String sex;
     private boolean hasMilitaryTicket;
+    private int studentСourse;
 
 
     private boolean isEmpty(final String value) {
@@ -24,6 +25,13 @@ public class Student {
 
     private boolean validateTicket(final long Ticket) {
         if (Math.ceil(Math.log10(Ticket + 0.5)) == 6) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean validateStudentСourse(final int StudentСourseval) {
+        if (StudentСourseval <= 0 || StudentСourseval >= 5) {
             return true;
         }
         return false;
@@ -56,6 +64,13 @@ public class Student {
         } else System.out.println("если 0 значит неправильно введен номер билета");
     }
 
+    public void setStudentСourse(int studentСourse) {
+        if (validateStudentСourse(studentСourse)) {
+            this.studentСourse = studentСourse;
+        }
+
+    }
+
     public Student() {
     }
 
@@ -82,12 +97,10 @@ public class Student {
         return studentTicket;
     }
 
-
-    /*public static String getName(Student student) {
-        return student.firstName;
+    public int getStudentСourse() {
+        return studentСourse;
     }
 
-     */
 
     public static Student CREATE_STUDENT(String firstName, String last, String middle, long ticket) {
         return new Student(firstName, last, middle, ticket);
