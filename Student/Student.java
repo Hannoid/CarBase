@@ -30,8 +30,8 @@ public class Student {
         return false;
     }
 
-    private boolean validateStudentСourse(final int StudentСourseval) {
-        if (StudentСourseval <= 0 || StudentСourseval >= 5) {
+    private boolean validateStudentСourse(int StudentСourseval) {
+        if (StudentСourseval >= 0 & StudentСourseval <= 7) {
             return true;
         }
         return false;

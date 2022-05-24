@@ -26,6 +26,8 @@ public class StudentResource {
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
         studentVova.setStudentTicket(1654441);
+        studentVova.setStudentСourse(10);
+        System.out.println("student kurs   " + studentVova.getStudentСourse());
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
