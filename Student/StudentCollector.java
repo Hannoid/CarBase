@@ -1,7 +1,5 @@
 package Student;
 
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.Objects;
 
 
@@ -85,16 +83,23 @@ public class StudentCollector {
 
 
     }
-    /*public void removeStudentName(String firstName) {
-        for (int i = 0; i < studentArrays.length; i++) {
-            if (studentArrays.f== firstName) {
-                return i;
-            }
-        }
-        return -1;
-    }
-     */
 
+
+    public void nextWell(String firstName, String lastName) {
+        for (int i = 0; i < studentArrays.length; i++) {
+
+            if (studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
+                if (studentArrays[i] != null && lastName != null && studentArrays[i].getLastName() != null && studentArrays[i].getLastName().equals(lastName)) {
+                    studentArrays[i].getStudentСourse() = studentArrays[i].setStudentСourse();
+                    System.out.println(studentArrays[i].getStudentСourse());
+
+                }
+                break;
+
+            }
+
+        }
+    }
 
     public Student[] getAllStudents() {
         return studentArrays;

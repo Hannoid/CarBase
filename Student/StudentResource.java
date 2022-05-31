@@ -26,8 +26,12 @@ public class StudentResource {
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
         studentVova.setStudentTicket(1654441);
-        studentVova.setStudentСourse(10);
+        studentVova.setStudentСourse(1);
         System.out.println("student kurs   " + studentVova.getStudentСourse());
+        System.out.println(131212);
+        studentCollector.nextWell("Vova","Vova");
+        System.out.println("student kurs   " + studentVova.getStudentСourse());
+        studentVova.nextStudentCourse(1);
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
@@ -68,11 +72,6 @@ public class StudentResource {
         studentCollector.removeStudent(0);
 
          */
-
-        //studentCollector.removeStudentName(Kate);
-        //studentCollector.remove("studentKate");
-
-
 
 
 
