@@ -88,9 +88,9 @@ public class StudentCollector {
     public void nextWell(String firstName, String lastName) {
         for (int i = 0; i < studentArrays.length; i++) {
 
-            if (studentArrays[i] != null && firstName != null && studentArrays[i].getName() != null && studentArrays[i].getName().equals(firstName)) {
-                if (studentArrays[i] != null && lastName != null && studentArrays[i].getLastName() != null && studentArrays[i].getLastName().equals(lastName)) {
-                    studentArrays[i].getStudentСourse() = studentArrays[i].setStudentСourse();
+            if (studentArrays[i].getName().equals(firstName)) {
+                if (studentArrays[i].getLastName().equals(lastName)) {
+                    studentArrays[i].getStudentСourse() = studentArrays[i].setStudentСourse(this.st);
                     System.out.println(studentArrays[i].getStudentСourse());
 
                 }
@@ -99,7 +99,11 @@ public class StudentCollector {
             }
 
         }
+
+
     }
+
+
 
     public Student[] getAllStudents() {
         return studentArrays;

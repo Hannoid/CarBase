@@ -28,10 +28,12 @@ public class StudentResource {
         studentVova.setStudentTicket(1654441);
         studentVova.setStudentСourse(1);
         System.out.println("student kurs   " + studentVova.getStudentСourse());
-        System.out.println(131212);
-        studentCollector.nextWell("Vova","Vova");
+        //System.out.println(131212);
+        //studentCollector.nextWell("Vova","Vova");
         System.out.println("student kurs   " + studentVova.getStudentСourse());
-        studentVova.nextStudentCourse(1);
+        studentVova.nextStudentCourse(2);
+        System.out.println("student kurs   " + studentVova.getStudentСourse());
+
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
