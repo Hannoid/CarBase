@@ -25,14 +25,11 @@ public class StudentResource {
         studentVova.setFirstName("Vova");
         studentVova.setLastName("Vova");
         studentVova.setMiddleName("Vova");
-        studentVova.setStudentTicket(1654441);
+        studentVova.setStudentTicket(165444);
         studentVova.setStudentСourse(1);
-        System.out.println("student kurs   " + studentVova.getStudentСourse());
-        //System.out.println(131212);
-        //studentCollector.nextWell("Vova","Vova");
-        System.out.println("student kurs   " + studentVova.getStudentСourse());
-        studentVova.nextStudentCourse(2);
-        System.out.println("student kurs   " + studentVova.getStudentСourse());
+
+
+
 
 
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
@@ -46,9 +43,21 @@ public class StudentResource {
         studentCollector.addNewStudent(studentOlga1);
         //System.out.println(studentKate.getStudentTicket());
 
+
+
+
         StudentResource studentResource = new StudentResource();
         studentResource.printAllStudents(studentCollector.getAllStudents());
         System.out.println("asdasdasd+");
+
+        studentCollector.searchStudent("Vova");
+        System.out.println("student kurs   " + studentVova.getStudentСourse());
+
+        studentCollector.nextWell("Vova","Vova");
+        System.out.println("student kurs   " + studentVova.getStudentСourse());
+        //studentVova.nextStudentCourse(2);
+
+
 
         System.out.println();
 
@@ -56,12 +65,14 @@ public class StudentResource {
         //studentCollector.removeFirsName("Olga");
         //studentCollector.removeTicket(216577);
 
-        studentCollector.searchStudent("Kate");
+        /*studentCollector.searchStudent("Kate");
         System.out.println("remove array");
         //studentResource.printAllStudents(studentCollector.getAllStudents());
         System.out.println("");
         studentCollector.searchTicket(216577);
         studentCollector.searchTicket(264888);
+
+         */
 
 
 
