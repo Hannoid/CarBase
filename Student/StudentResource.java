@@ -53,9 +53,9 @@ public class StudentResource {
         studentCollector.searchStudent("Vova");
         System.out.println("student kurs   " + studentVova.getStudentСourse());
 
-        studentCollector.nextWell("Vova","Vova");
-        System.out.println("student kurs   " + studentVova.getStudentСourse());
-        //studentVova.nextStudentCourse(2);
+        //studentCollector.nextWell("Vova","Vova");
+        studentVova.nextStudentCourse();
+        System.out.println("student kurs   " +studentVova.getName()+"+++"+ studentVova.getStudentСourse());
 
 
 

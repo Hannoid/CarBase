@@ -71,8 +71,8 @@ public class Student {
 
     }
 
-    public void nextStudentCourse(int studentСourse){
-        setStudentСourse(studentСourse+1);
+    public void nextStudentCourse(){
+        setStudentСourse(getStudentСourse()+1);
     }
 
 
