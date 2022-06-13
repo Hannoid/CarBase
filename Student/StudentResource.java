@@ -28,10 +28,6 @@ public class StudentResource {
         studentVova.setStudentTicket(165444);
         studentVova.setStudentСourse(1);
 
-
-
-
-
         Student studentKate = Student.CREATE_STUDENT("Kate", "Katerin", "Katerinovna", 258888);
         Student studentOlga = Student.CREATE_STUDENT("Olga", "Olga", "Olegovna", 264888);
         Student studentOlga1 = Student.CREATE_STUDENT("Olga", "Olgas", "Olegovnas", 216577);
@@ -41,21 +37,17 @@ public class StudentResource {
         studentCollector.addNewStudent(studentKate);
         studentCollector.addNewStudent(studentOlga);
         studentCollector.addNewStudent(studentOlga1);
-        //System.out.println(studentKate.getStudentTicket());
-
-
-
 
         StudentResource studentResource = new StudentResource();
         studentResource.printAllStudents(studentCollector.getAllStudents());
-        System.out.println("asdasdasd+");
+
 
         studentCollector.searchStudent("Vova");
         System.out.println("student kurs   " + studentVova.getStudentСourse());
 
         //studentCollector.nextWell("Vova","Vova");
         studentVova.nextStudentCourse();
-        System.out.println("student kurs   " +studentVova.getName()+"+++"+ studentVova.getStudentСourse());
+        System.out.println("student " +studentVova.getName()+" на "+ studentVova.getStudentСourse()+ " курсе");
 
 
 
