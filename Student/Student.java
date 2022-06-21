@@ -30,6 +30,14 @@ public class Student {
         return false;
     }
 
+
+    private boolean validateAge ( int Age){
+        if (Math.ceil(Math.log10(Age + 0.5)) == 2 & 80<=Age & 16 >=Age) {
+            return true;
+        }
+        return false;
+    }
+
     private boolean validateStudentСourse(int StudentСourseval) {
         if (StudentСourseval >= 0 & StudentСourseval <= 7) {
             return true;
