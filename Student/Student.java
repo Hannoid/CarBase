@@ -24,7 +24,7 @@ public class Student {
     }
 
     private boolean validateTicket(final long Ticket) {
-        if (Math.ceil(Math.log10(Ticket + 0.5)) == 6) {
+        if (Math.ceil(Math.log10(Ticket + 0.5)) == 6 ) {
             return true;
         }
         return false;
