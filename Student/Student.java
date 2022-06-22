@@ -23,16 +23,24 @@ public class Student {
         return name.replaceAll("[^0-9]", "").length() == 0;
     }
 
+    private boolean validateSex(final String sex) {
+        if (sex.equals("Male") || sex.equals("male") || sex.equals("Female") || sex.equals("female")) {
+            return true;
+        }
+        return false;
+
+    }
+
     private boolean validateTicket(final long Ticket) {
-        if (Math.ceil(Math.log10(Ticket + 0.5)) == 6 ) {
+        if (Math.ceil(Math.log10(Ticket + 0.5)) == 6) {
             return true;
         }
         return false;
     }
 
 
-    private boolean validateAge ( int Age){
-        if (Math.ceil(Math.log10(Age + 0.5)) == 2 & 80<=Age & 16 >=Age) {
+    private boolean validateAge(int Age) {
+        if (Math.ceil(Math.log10(Age + 0.5)) == 2 & 80 <= Age & 16 >= Age) {
             return true;
         }
         return false;
@@ -79,13 +87,9 @@ public class Student {
 
     }
 
-    public void nextStudentCourse(){
-        setStudentСourse(getStudentСourse()+1);
+    public void nextStudentCourse() {
+        setStudentСourse(getStudentСourse() + 1);
     }
-
-
-
-
 
 
     public Student() {
